@@ -1,7 +1,6 @@
 package com.example.Zapasnik.web;
 
 import com.example.Zapasnik.repository.Product;
-import com.example.Zapasnik.repository.ProductRepository;
 import com.example.Zapasnik.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

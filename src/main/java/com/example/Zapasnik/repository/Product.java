@@ -23,12 +23,12 @@ public class Product {
     private int minAccValue;
 
     @Column(name = "picture_number", nullable = false)
-    private int pictureNumber;
+    private String pictureNumber;
 
     public Product() {
     }
 
-    public Product(int id, String productName, int amount, int minAccValue, int pictureNumber) {
+    public Product(int id, String productName, int amount, int minAccValue, String pictureNumber) {
         this.id = id;
         this.productName = productName;
         this.amount = amount;
@@ -68,11 +68,11 @@ public class Product {
         this.minAccValue = minAccValue;
     }
 
-    public int getPictureNumber() {
+    public String getPictureNumber() {
         return pictureNumber;
     }
 
-    public void setPictureNumber(int pictureNumber) {
+    public void setPictureNumber(String pictureNumber) {
         this.pictureNumber = pictureNumber;
     }
 }
