@@ -35,4 +35,10 @@ public class ProductController {
         return productService.removeById(id);
     }
 
+    @PutMapping
+    public Product changeProduct(@RequestBody Product product){
+        return productService.updateProduct(product);
+    }
+
+
 }

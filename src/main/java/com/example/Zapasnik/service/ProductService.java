@@ -11,10 +11,12 @@ import java.util.NoSuchElementException;
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
+    private final ProductUpdator productUpdator;
 
     @Autowired
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(ProductRepository productRepository, ProductUpdator productUpdator) {
         this.productRepository = productRepository;
+        this.productUpdator = productUpdator;
     }
 
     public List<Product> getProducts(){
@@ -36,6 +38,10 @@ public class ProductService {
         productRepository.deleteById(id);
         return product;
 
+    }
+
+    public Product updateProduct(Product product){
+        return productUpdator.update(product);
     }
 
 

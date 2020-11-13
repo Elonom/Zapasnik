@@ -25,6 +25,7 @@ public class Product {
     @Column(name = "picture_number", nullable = false)
     private String pictureNumber;
 
+
     public Product() {
     }
 
